@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Management Login</title>
+    <link rel="stylesheet" href="serlog.css">
+</head>
+<body>
+    <div class="login-container">
+        <header>
+            <img src="https://tse1.mm.bing.net/th?id=OIP.whzfYOPWubyGVD487M6GUgAAAA&pid=Api&P=0&h=180" alt="Logo" class="logo">
+            <h1>Welcome Back</h1>
+        </header>
+        <main>
+            <div class="form-container">
+                <h2>Login</h2>
+                <form id="login-form">
+                    <label for="email">Email Address<span>*</span></label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                    <label for="password">Password<span>*</span></label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+                    <button type="submit">Sign In</button>
+                </form>
+                <p class="quote">"Success is where preparation and opportunity meet."</p>
+            </div>
+        </main>
+    </div>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const form = document.getElementById('login-form');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Perform any form validation or processing here
+
+            // Redirect to the desired page
+            window.location.href = 'navbar.html';
+        });
+    });
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,191 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    animation: fadeIn 1.5s ease-in-out;
+    background-image: url("https://tse3.mm.bing.net/th?id=OIP.nq-lcD5s-6eLtguy9AnxPQHaEo&pid=Api&P=0&h=180");
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    background-color: rgba(255, 255, 255, 0.8); /* Transparent background */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+    backdrop-filter: blur(10px); /* Blur background behind the form */
+}
+
+header {
+    background-color: rgba(76, 175, 80, 0.8); /* Slightly transparent green */
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    animation: slideDown 1s ease-out;
+}
+
+header .logo {
+    width: 80px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+header h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.content {
+    display: flex;
+    padding: 20px;
+    animation: zoomIn 1s ease-in;
+}
+
+.sidebar {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    animation: fadeInLeft 1.2s ease-in-out;
+    background-color: rgba(255, 255, 255, 0.7); /* Slightly transparent white */
+    border-radius: 8px;
+}
+
+.sidebar img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+.sidebar p {
+    font-size: 16px;
+    color: #333;
+}
+
+.sidebar.left:hover,
+.sidebar.right:hover {
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+    transform: translateY(-10px);
+}
+
+.form-container {
+    flex: 2;
+    padding: 20px;
+    background-color: rgba(241, 241, 241, 0.9); /* Slightly transparent light grey */
+    animation: fadeInUp 1s ease-in-out;
+    border-radius: 8px;
+}
+
+.form-container h2 {
+    margin-bottom: 20px;
+    font-size: 22px;
+    color: #4CAF50;
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-container label span {
+    color: red;
+}
+
+.form-container input,
+.form-container select {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent input fields */
+}
+
+.form-container button {
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-container button:hover {
+    background-color: #45a049;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

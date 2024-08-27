@@ -1,0 +1,191 @@
+/* Basic reset and body styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: url("https://tse3.mm.bing.net/th?id=OIP.XVmLzZGf4sMMCBCWC4B05QHaEK&pid=Api&P=0&h=180") no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    padding-top: 60px; /* To account for the fixed navbar */
+}
+
+/* Navbar styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    background: none;
+}
+
+.navbar .event-logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .event-logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.navbar .event-logo a {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+}
+.navbar a{
+    top:10px;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar .nav-links li {
+    display: inline;
+}
+
+.navbar .nav-links li a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar .nav-links li a:hover {
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Welcome container styling */
+.welcome-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0 20px;
+    text-align: center;
+    color: white;
+    animation: fadeIn 3s ease-in-out;
+}
+
+.welcome-container h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.welcome-container p {
+    font-size: 24px;
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+.intro-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.intro-image img:hover {
+    transform: scale(1.05);
+}
+
+.image-caption {
+    margin-top: 10px;
+    font-style: italic;
+    font-size: 18px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.know-more-btn {
+    padding: 10px 20px;
+    width: 100%;
+    max-width: 200px;
+    background-color: blueviolet;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.know-more-btn:hover {
+    background-color: darkviolet;
+    transform: scale(1.05);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .navbar .nav-links {
+        flex-direction: column;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .navbar .nav-links li {
+        margin-bottom: 10px;
+    }
+
+    .welcome-container h1 {
+        font-size: 36px;
+    }
+
+    .welcome-container p {
+        font-size: 20px;
+    }
+
+    .intro-image img {
+        max-width: 300px;
+    }
+
+    .know-more-btn {
+        width: auto;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar .event-logo a {
+        font-size: 20px;
+    }
+
+    .welcome-container h1 {
+        font-size: 28px;
+    }
+
+    .welcome-container p {
+        font-size: 18px;
+    }
+
+    .intro-image img {
+        max-width: 100%;
+    }
+
+    .know-more-btn {
+        width: auto;
+        padding: 8px;
+        font-size: 16px;
+    }
+}

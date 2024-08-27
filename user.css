@@ -1,0 +1,101 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+header {
+    margin-bottom: 40px;
+}
+
+.logo {
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.warning-text {
+    font-size: 1em;
+    color: #ff4d4d;
+    margin-bottom: 40px;
+}
+
+.roles {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.role-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+}
+
+.role-card img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.role-card h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.role-card p {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+footer {
+    margin-top: 40px;
+}
+
+.next-button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.next-button:hover {
+    background-color: #575757;
+}
+.role-card {
+    border: 2px solid transparent; /* Default border is transparent */
+    transition: border-color 0.3s; /* Smooth transition for border color */
+    cursor: pointer;
+}
+
+.role-card.selected {
+    border-color: orange; /* Border color for selected card */
+}
+
+.next-button {
+    cursor: pointer;
+}

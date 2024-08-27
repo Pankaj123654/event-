@@ -1,0 +1,195 @@
+/* Basic reset and body styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: url("https://tse3.mm.bing.net/th?id=OIP.T1tKnpuu-xW-iifAuz33zAHaEd&pid=Api&P=0&h=180") no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    padding-top: 60px; /* To account for the fixed navbar */
+}
+
+/* Navbar styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .event-logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .event-logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.navbar .event-logo a {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar .nav-links li a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar .nav-links li a:hover {
+    background-color: #575757;
+    border-radius: 4px;
+}
+
+/* About container styling */
+.about-container {
+    padding: 80px 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+/* About header styling */
+.about-header {
+    margin-bottom: 40px;
+}
+
+.about-header h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.about-header p {
+    font-size: 1.2em;
+    color: #fff;
+    line-height: 1.6;
+}
+
+/* About content styling */
+.about-content {
+    display: flex;
+    flex-direction: column; /* Stack sections vertically */
+    align-items: center; /* Center align sections */
+    gap: 20px; /* Space between sections */
+}
+
+/* About section styling */
+.about-section {
+    width: 100%;
+    max-width: 800px; /* Adjusted width for better readability */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: left;
+    padding: 20px;
+}
+
+.about-section img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.about-section h2 {
+    font-size: 1.5em;
+    margin: 20px 0;
+    color: #333;
+}
+
+.about-section p {
+    font-size: 1em;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 1024px) {
+    /* Adjust container padding for tablets */
+    .about-container {
+        padding: 60px 15px;
+    }
+
+    .about-header h1 {
+        font-size: 2.5em;
+    }
+
+    .about-header p {
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Stack about sections vertically on smaller screens */
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-section {
+        width: 90%; /* Make sections full width on small screens */
+        padding: 15px;
+    }
+
+    .about-header h1 {
+        font-size: 2em;
+    }
+
+    .about-header p {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Adjust text and layout for very small screens */
+    .navbar .event-logo a {
+        font-size: 20px;
+    }
+
+    .navbar .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .about-container {
+        padding: 40px 10px;
+    }
+
+    .about-header h1 {
+        font-size: 1.5em;
+    }
+
+    .about-header p {
+        font-size: 0.9em;
+    }
+
+    .about-section h2 {
+        font-size: 1.2em;
+    }
+
+    .about-section p {
+        font-size: 0.9em;
+    }
+}

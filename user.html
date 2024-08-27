@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Role Selection</title>
+    <link rel="stylesheet" href="user.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="https://tse1.mm.bing.net/th?id=OIP.whzfYOPWubyGVD487M6GUgAAAA&pid=Api&P=0&h=180" alt="Logo" class="logo">
+            <h1>Select role that you fit in Event Management</h1>
+            <p class="warning-text">⚠️ Please choose business type based on the nature of your business. It can't be changed once submitted!</p>
+        </header>
+        <main class="roles">
+            <div class="role-card" data-role="find-service">
+                <img src="https://tse1.mm.bing.net/th?id=OIP.x1n20-o8iXNC5jgXt-Q_KgHaHa&pid=Api&P=0&h=180" alt="Find a Service">
+                <h2>FIND A SERVICE</h2>
+                <p>Explore and book services from trusted service providers.</p>
+            </div>
+            <div class="role-card" data-role="become-seller">
+                <img src="https://tse4.mm.bing.net/th?id=OIP.yOKkS6q9J7-5CMyfPSl2ugHaEK&pid=Api&P=0&h=180" alt="Become a Seller">
+                <h2>BECOME A SELLER</h2>
+                <p>Offer your services across India and start earning more.</p>
+            </div>
+            <div class="role-card" data-role="event-seeker">
+                <img src="https://tse4.mm.bing.net/th?id=OIP.D7AlZKwVfnv8KkzNTIgHoAHaFV&pid=Api&P=0&h=180" alt="Event Seeker">
+                <h2>EVENT SEEKER</h2>
+                <p>I am looking to upskill and find job opportunities.</p>
+            </div>
+        </main>
+        <footer>
+            <button type="button" class="next-button">Next</button>
+        </footer>
+    </div>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const roleCards = document.querySelectorAll('.role-card');
+        const nextButton = document.querySelector('.next-button');
+        let selectedRole = null;
+
+        roleCards.forEach(card => {
+            card.addEventListener('click', function() {
+                roleCards.forEach(c => c.classList.remove('selected'));
+                this.classList.add('selected');
+                selectedRole = this.getAttribute('data-role'); // Store the selected role
+            });
+        });
+
+
+        nextButton.addEventListener('click', function() {
+            if (selectedRole) {
+                localStorage.setItem('selectedRole', selectedRole);
+                console.log('Selected Role:', selectedRole); // Debugging line
+                window.location.href = 'reg.html';
+            } else {
+                alert('Please select a role before proceeding.');
+            }
+        });
+    });
+    </script>
+</body>
+</html>
